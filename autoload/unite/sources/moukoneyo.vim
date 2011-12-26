@@ -8,7 +8,7 @@ endfunction
 let s:source = {
 \	"name" : "moukoneyo",
 \	"description" : "moukoneyo",
-\	"syntax" : "uniteSource_moukoneyo",
+\	"syntax" : "unitesource_moukoneyo",
 \	"moukoneyo_counter" : 0,
 \	"hooks" : {},
 \	"moukoneyo_anim_data" : [
@@ -44,14 +44,6 @@ let s:source = {
 \	],
 \]
 \}
-
-function! s:source.hooks.on_syntax(args, context)
- 	syntax match unitesource_moukoneyo /[もう来ねぇよ!]/ containedin=unitesource_moukoneyo
-" 	highlight uniteSource_sl_gameBlock21 guifg='#ff0000'
-" 	highlight uniteSource_sl_gameBlock21 guibg='#ff0000'
-" 	highlight uniteSource_sl_gameBlock21 ctermfg='14'
-" 	highlight uniteSource_sl_gameBlock21 ctermbg='14'
-endfunction
 
 function! s:source.async_gather_candidates(args, context)
 	let a:context.source.unite__cached_candidates = []
